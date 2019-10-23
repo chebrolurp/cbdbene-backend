@@ -1,5 +1,11 @@
 {{> header}}
 {{> nav}}
+
+<style>
+.hideThisDate span{
+display:none;
+}
+</style>
 <div id="page-wrapper">
     <div class="row">
         <div class="col-lg-12">
@@ -52,8 +58,8 @@
                         {{!-- <td>{{dateformat this.ordermilisecond 'DD/MM/YYYY h:mm a'}}</td> --}}
                         <td>{{ordervalue.grandTotal}}</td>
                         <td>{{ordervalue.status}}</td>
-                        <td>
-                            {{dateformat ordervalue.createdOn 'DD/MM/YYYY'}}
+                        <td class="hideThisDate">
+                            <span class="hideThisDate">{{dateformat ordervalue.createdOn 'DD/MM/YYYY'}}</span>{{ordervalue.createdOn}}
                             </td>
                         <td><div class="custom-delete-edit">   
                                 <a href="/pages/orders/delete/{{ordervalue._id}}" class="delete-product" data-id="{{productvalue._id}}"><i class="fa fa-trash" title="Delete" aria-hidden="true"></i></a>                                
@@ -68,5 +74,8 @@
         </div>
     </div>
 </div>
+
+
+
 <!-- /#page-wrapper -->
 {{> footer}}

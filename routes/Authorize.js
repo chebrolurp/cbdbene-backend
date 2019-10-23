@@ -274,6 +274,23 @@ router.post("/get/transaction", (req, res) => {
     makeHttpCall(postData, req, res);
 });
 
+
+//Get susbcription Status
+router.get("/get/subscription/:id", (req, res) => {
+    let postData = {
+        "ARBGetSubscriptionStatusRequest": {
+            "merchantAuthentication": {
+                name,
+                transactionKey
+            },
+            "subscriptionId": req.params.id
+        }
+    }
+
+    makeHttpCall44(postData, req, res)
+})
+
+
 //Create a subscription 
 router.post("/create/subscription", (req, res) => {
     let postData = {
@@ -410,7 +427,7 @@ router.post("/modify/subscription/profile", (req, res) => {
   
    
     let postData = {
-        "ARBCreateSubscriptionRequest": {
+        "ARBUpdateSubscriptionRequest": {
             "merchantAuthentication": {
                 name,
                 transactionKey

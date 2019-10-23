@@ -51,7 +51,7 @@ var j = schedule.scheduleJob('0 0 * * *', function () {
 						 <tbody>
 						  <tr> 
 						   <td align="center" style="border-collapse:collapse!important;font-family:Arial,sans-serif"> 
-							 <img src="https://admin.cbdbene.com/var/www/cbdbene_3rde/cbdbene/public/images/uploads/download.png" alt="www.cbdbene.com" title="www.cbdbene.com" class="m_-4653644642374936975brandImage CToWUd" border="0" width="130" style="width:130px"> 
+							 <img src="https://cbdbene.com/static/media/bene_new.ce8b3135.png" alt="www.cbdbene.com" title="www.cbdbene.com" class="m_-4653644642374936975brandImage CToWUd" border="0" width="130" style="width:130px"> 
 							 </td> 
 						  </tr> 
 						 </tbody>
@@ -345,7 +345,7 @@ router.post('/process/order', async function (req, res) {
 				invItem.description = el.title
 			}
 			invItem.quantity = el.qty
-			invItem.unitPrice = Math.round(el.unitPrice)
+			invItem.unitPrice = Math.floor(el.unitPrice)
 			invItem.unit = "Hours"
 			tasks.push(invItem);
 			console.log({ orderedProduct })
@@ -367,7 +367,7 @@ router.post('/process/order', async function (req, res) {
 			if (req.body.taxAmount > 0) {
 				itemMeta2.description = "Tax"
 				itemMeta2.quantity = 1
-				itemMeta2.unitPrice = Math.round(req.body.taxAmount)
+				itemMeta2.unitPrice = Math.floor(req.body.taxAmount)
 				itemMeta2.unit = "Hours"
 				tasks.push(itemMeta2)
 			}
@@ -390,7 +390,7 @@ router.post('/process/order', async function (req, res) {
 			if (req.body.shippingCharge > 0) {
 				itemMeta.description = "Shipping Charge"
 				itemMeta.quantity = 1
-				itemMeta.unitPrice = Math.round(req.body.shippingCharge)
+				itemMeta.unitPrice = Math.floor(req.body.shippingCharge)
 				itemMeta.unit = "Hours"
 				tasks.push(itemMeta)
 			}
@@ -478,7 +478,7 @@ router.post('/process/order', async function (req, res) {
 						style="text-decoration:none;color:rgb(0,102,153);font:12px/16px Arial,sans-serif"
 						target="_blank"
 						data-saferedirecturl="${producturl}">
-						<img id="m_-1220850270213470107m_3747154870368339796asin"
+						<img style="width: 250px; height: 250px;" id="m_-1220850270213470107m_3747154870368339796asin"
 						  src="${prodimg}"
 						  style="border:0" class="CToWUd"> </a> </td>
 					<td class="m_-1220850270213470107m_3747154870368339796name"
@@ -533,7 +533,7 @@ router.post('/process/order', async function (req, res) {
 					</td>
 					<td class="m_-1220850270213470107m_3747154870368339796price"
 					  style="text-align:right;font-size:14px;padding:10px 10px 0 10px;white-space:nowrap;vertical-align:top;line-height:16px;font-family:Arial,sans-serif">
-					  <strong>${el.subTotal}</strong> <br> </td>
+					  <strong>$ ${Math.floor(el.subTotal)}</strong> <br> </td>
 				  </tr>`
 							console.log({ htmldata })
 							products.push(htmldata)
@@ -583,7 +583,7 @@ router.post('/process/order', async function (req, res) {
 											  target="_blank"
 											  data-saferedirecturl="cbdbene.com">
 											  <img alt="cbdbene.com"
-												src="https://admin.cbdbene.com/var/www/cbdbene_3rde/cbdbene/public/images/uploads/download.png"
+												src="https://cbdbene.com/static/media/bene_new.ce8b3135.png"
 												style="border:0;width:115px" class="CToWUd" height="120" width="80"> </a> </td>
 										  <td class="m_-1220850270213470107m_3747154870368339796navigation"
 											style="text-align:right;padding:5px 0;border-bottom:1px solid rgb(204,204,204);white-space:nowrap;vertical-align:top;font-size:12px;line-height:16px;font-family:Arial,sans-serif">
@@ -778,7 +778,7 @@ router.post('/process/order', async function (req, res) {
 										  <td style="vertical-align:top;font-size:12px;line-height:16px;font-family:Arial,sans-serif">
 											<p style="margin:4px 0 0 0;font:12px/16px Arial,sans-serif">
 											   Visit our <a
-												href="LEARNPAGELINK"
+												href="https://cbdbene.com/US/learn"
 												style="text-decoration:none;color:rgb(0,102,153);font:12px/16px Arial,sans-serif"
 												target="_blank"
 												data-saferedirecturl="">Learn
@@ -1165,7 +1165,7 @@ router.post('/add', async function (req, res) {
 											  target="_blank"
 											  data-saferedirecturl="cbdbene.com">
 											  <img alt="cbdbbene.com"
-												src="https://admin.cbdbene.com/var/www/cbdbene_3rde/cbdbene/public/images/uploads/download.png"
+												src="https://cbdbene.com/static/media/bene_new.ce8b3135.png"
 												style="border:0;width:115px" class="CToWUd" height="120" width="80"> </a> </td>
 										  <td class="m_-1220850270213470107m_3747154870368339796navigation"
 											style="text-align:right;padding:5px 0;border-bottom:1px solid rgb(204,204,204);white-space:nowrap;vertical-align:top;font-size:12px;line-height:16px;font-family:Arial,sans-serif">

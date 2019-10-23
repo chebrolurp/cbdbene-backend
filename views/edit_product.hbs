@@ -290,15 +290,18 @@
                                             <input type="text" class="product_expiry" name="expiry"
                                                 value="{{products.expiry}}" placeholder="dd/mm/yyyy">
                                         </p>
-                                        <p class="form-field dimensions_field">
-                                            <label for="product_length">Dimensions (inches)</label>
-                                            <span class="wrap">
-                                                <input id="product_length" placeholder="Length"
+                                        <p class="form-field dimensions_field" >
+                                            <label for="product_length" style="width:35%;">Dimensions (inches)</label>
+                                            <span class="wrap" style="float: left;">
+Length:
+                                                <input style="width: 90px;"id="product_length" placeholder="Length"
                                                     class="input-text wc_input_decimal" type="number" name="_length"
                                                     value="{{products.shipping_length}}">
-                                                <input placeholder="Width" class="input-text wc_input_decimal"
+Width:
+                                                <input style="width: 90px;" placeholder="Width" class="input-text wc_input_decimal"
                                                     type="number" name="_width" value="{{products.shipping_width}}">
-                                                <input placeholder="Height" class="input-text wc_input_decimal last"
+Height:                                                
+<input placeholder="Height" style="width: 90px;" class="input-text wc_input_decimal last"
                                                     type="number" name="_height" value="{{products.shipping_height}}">
                                             </span>
                                         </p>
@@ -351,7 +354,7 @@
                                             <label for="upsell_ids">Upsells</label>
                                             <select class="wc-product-search select2-accessible enhanced" multiple=""
                                                 style="width: 50%;" id="upsell_ids" name="upsell_ids[]"
-                                                data-placeholder="Search for a product…"
+                                                data-placeholder="Search for a productâ€¦"
                                                 data-action="woocommerce_json_search_products_and_variations" data-exclude="591"
                                                 tabindex="-1" aria-="true">
                                             </select>
@@ -362,7 +365,7 @@
                                                         <ul class="select2-selection__rendered" aria-live="polite"
                                                             aria-relevant="additions removals" aria-atomic="true">
                                                             <li class="select2-search select2-search--inline">
-                                                                <input class="select2-search__field" type="text" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" role="textbox" aria-autocomplete="list" placeholder="Search for a product…" style="width: 100px;">
+                                                                <input class="select2-search__field" type="text" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" role="textbox" aria-autocomplete="list" placeholder="Search for a productâ€¦" style="width: 100px;">
                                                             </li>
                                                         </ul>
                                                     </span>
@@ -376,7 +379,7 @@
                                             <label for="crosssell_ids">Cross-sells</label>
                                             <select class="wc-product-search select2--accessible enhanced" multiple=""
                                                 style="width: 50%;" id="crosssell_ids" name="crosssell_ids[]"
-                                                data-placeholder="Search for a product…"
+                                                data-placeholder="Search for a productâ€¦"
                                                 data-action="woocommerce_json_search_products_and_variations" data-exclude="591"
                                                 tabindex="-1" aria-="true">
                                             </select>
@@ -388,7 +391,7 @@
                                                                 <input class="select2-search__field" type="text" tabindex="0"
                                                                 autocomplete="off" autocorrect="off" autocapitalize="off"
                                                                 spellcheck="false" role="textbox" aria-autocomplete="list"
-                                                                placeholder="Search for a product…" style="width: 100px;">
+                                                                placeholder="Search for a productâ€¦" style="width: 100px;">
                                                             </li>
                                                         </ul>
                                                     </span>

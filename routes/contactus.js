@@ -37,9 +37,10 @@ router.get("/test", (req, res) => {
 
 router.post("/", (req, res) => {
     const { name, email, text, subject } = req.body;
-    let replyTo = {email}
-    let from = `${name} <${email}>`,
-    to = "admin@cbdbene.com"
+    let replyTo = email
+    //let from = `${name} <${email}>`,
+let from = "customer.support@cbdbene.com"    
+to = "anas3rde@gmail.com"
    
 
 
@@ -50,6 +51,8 @@ router.post("/", (req, res) => {
         subject,
         text
     }
+
+console.log(mail)
     smtpTransport.sendMail(mail, function(err){
         if(err){
             console.log(err)

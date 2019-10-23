@@ -11,16 +11,6 @@ const apiKey = "EZTK09944b7a65df4e44a6d8457478b41575Hq5800KjUUXBh0L8zNhKow"
 
 const api = new EasyPost(apiKey);
 
-// Set Address
-const toAddress = new api.Address({
-    name: 'Dr. Steve Brule',
-    street1: '179 N Harbor Dr',
-    city: 'Redondo Beach',
-    state: 'CA',
-    zip: '90277',
-    country: 'US',
-    phone: '310-808-5243'
-});
 
 const fromAddress = new api.Address({
     name: 'EasyPost',

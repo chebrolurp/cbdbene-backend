@@ -617,9 +617,11 @@
                     ...rest
                 } = el
 
+                
+
                 return {
                     ...el,
-                    title: Object.values({ ...rest, sku }).filter(elx => elx && elx.trim() !== "").reduce((a, b) => a + " | " + b, "")
+                    title: Object.values({ ...rest, sku, sale_price }).filter(elx => elx && elx.trim() !== "").reduce((a, b) => a + " | " + b, "")
                 }
             })
         }
