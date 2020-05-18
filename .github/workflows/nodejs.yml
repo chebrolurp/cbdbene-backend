@@ -5,7 +5,7 @@ name: Node.js CI
 
 on:
     watch:
-    types: [started]
+        types: [started]
     
   #push:
    # branches: [ master ]
@@ -29,4 +29,4 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
     - run: npm run build --if-present
-    - run: npm test
+    - run: npm start
